@@ -1,0 +1,22 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Properties"
+        ],
+        "name": "Xplorer",
+        "stores": [
+            "propertyStore"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

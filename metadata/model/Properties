@@ -1,0 +1,85 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Properties"
+    },
+    "name": "MyModel1",
+    "designerId": "eb1e37aa-05fd-4d81-9641-ec6724471d7e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Name",
+                "type": "string"
+            },
+            "name": "MyField",
+            "designerId": "6b7b804d-f585-4054-8900-13a8cb8ab7a4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Size",
+                "type": "int"
+            },
+            "name": "MyField1",
+            "designerId": "d4f64d40-3090-4774-b2dc-d94ae8fc667d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Type",
+                "type": "string"
+            },
+            "name": "MyField2",
+            "designerId": "c8b5ad5b-cf06-45b2-adf6-1e72f302b9fe"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Date",
+                "type": "date"
+            },
+            "name": "MyField3",
+            "designerId": "3bb2f037-1384-44cf-8c94-3f0846a599c2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "User",
+                "type": "string"
+            },
+            "name": "MyField4",
+            "designerId": "85b8ad5a-882c-4b72-b2b4-e35be6448ea7"
+        }
+    ]
+}

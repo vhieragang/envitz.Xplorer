@@ -1,0 +1,63 @@
+{
+    "name": "envitz",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Medium",
+                "builtIn": true,
+                "height": 768,
+                "width": 1024
+            }
+        },
+        "urlPrefix": "http://localhost/envitz/",
+        "exportPath": "C:/xampp/htdocs/explorer",
+        "projectHasEnabledWebServer": true,
+        "lockUrlPrefix": true,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1165-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1220-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1275-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1605-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1109-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1224-inputEl": "a new version of the framework is available",
+        "sdkPath": "",
+        "displayfield-ExtBox1-1154-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1225-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1169-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62"
+        ],
+        "store": [
+            "5ed66bc5-492e-42d4-81d2-23424ee8ee5c"
+        ],
+        "controller": [],
+        "model": [
+            "eb1e37aa-05fd-4d81-9641-ec6724471d7e"
+        ],
+        "resource": [
+            "efa3151d-f411-416b-a78d-276e3b22783a",
+            "406e6b99-1d74-402b-b26f-dc043a0800f0"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
