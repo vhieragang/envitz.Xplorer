@@ -19,8 +19,9 @@ Ext.define('Xplorer.view.MyViewport', {
     requires: [
         'Ext.form.field.File',
         'Ext.grid.Panel',
-        'Ext.grid.column.Column',
-        'Ext.grid.View'
+        'Ext.grid.column.Date',
+        'Ext.grid.View',
+        'Ext.toolbar.Paging'
     ],
 
     itemId: 'mainView',
@@ -85,7 +86,7 @@ Ext.define('Xplorer.view.MyViewport', {
                                     text: 'Type'
                                 },
                                 {
-                                    xtype: 'gridcolumn',
+                                    xtype: 'datecolumn',
                                     width: 203,
                                     dataIndex: 'Date',
                                     text: 'Date'
@@ -95,6 +96,15 @@ Ext.define('Xplorer.view.MyViewport', {
                                     width: 250,
                                     dataIndex: 'User',
                                     text: 'User'
+                                }
+                            ],
+                            dockedItems: [
+                                {
+                                    xtype: 'pagingtoolbar',
+                                    dock: 'bottom',
+                                    width: 360,
+                                    displayInfo: true,
+                                    store: 'propertyStore'
                                 }
                             ]
                         }

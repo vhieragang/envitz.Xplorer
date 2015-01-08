@@ -30,90 +30,131 @@ Ext.define('Xplorer.store.propertyStore', {
             storeId: 'propertyStore',
             data: [
                 {
-                    Name: 'This is my files Uploaded',
-                    Size: 835,
-                    Type: '.CSS',
-                    Date: 2015/1/2,
-                    User: 'Jeslrel Agang'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'samples of me',
-                    Size: 277,
-                    Type: '.JPEG',
-                    Date: 2015/1/2,
-                    User: 'Kevin Leysa'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'Hellow World!',
-                    Size: 519,
-                    Type: '.JS',
-                    Date: 2015/1/2,
-                    User: 'Wilfred Ronquillo'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'my Examples',
-                    Size: 626,
-                    Type: '.PHP',
-                    Date: 2015/1/2,
-                    User: 'Rich Barlett'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'This is my files Uploaded',
-                    Size: 835,
-                    Type: '.CSS',
-                    Date: 2015/1/2,
-                    User: 'Jeslrel Agang'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'samples of me',
-                    Size: 277,
-                    Type: '.JPEG',
-                    Date: 2015/1/2,
-                    User: 'Kevin Leysa'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'Hellow World!',
-                    Size: 519,
-                    Type: '.JS',
-                    Date: 2015/1/2,
-                    User: 'Wilfred Ronquillo'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'my Examples',
-                    Size: 626,
-                    Type: '.PHP',
-                    Date: 2015/1/2,
-                    User: 'Rich Barlett'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'This is my files Uploaded',
-                    Size: 835,
-                    Type: '.CSS',
-                    Date: 2015/1/2,
-                    User: 'Jeslrel Agang'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'samples of me',
-                    Size: 277,
-                    Type: '.JPEG',
-                    Date: 2015/1/2,
-                    User: 'Kevin Leysa'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'Hellow World!',
-                    Size: 519,
-                    Type: '.JS',
-                    Date: 2015/1/2,
-                    User: 'Wilfred Ronquillo'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
                 {
-                    Name: 'my Examples',
-                    Size: 626,
-                    Type: '.PHP',
-                    Date: 2015/1/2,
-                    User: 'Rich Barlett'
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
                 },
-                
+                {
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
+                },
+                {
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
+                },
+                {
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
+                },
+                {
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
+                },
+                {
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
+                },
+                {
+                    Name: 'Hello World!',
+                    Size: 476,
+                    Type: '.HTML',
+                    Date: '7/11/2013',
+                    User: 'Jesrel Agang'
+                }
             ],
             proxy: {
                 type: 'ajax',

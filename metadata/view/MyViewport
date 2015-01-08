@@ -143,7 +143,7 @@
                             "designerId": "bab0d678-d41e-4773-bde8-f434d0677e34"
                         },
                         {
-                            "type": "Ext.grid.column.Column",
+                            "type": "Ext.grid.column.Date",
                             "reference": {
                                 "name": "columns",
                                 "type": "array"
@@ -154,7 +154,7 @@
                                 "text": "Date",
                                 "width": 203
                             },
-                            "name": "MyColumn8",
+                            "name": "MyDateColumn",
                             "designerId": "a1cae6c4-8f1a-4d2e-b865-72d43e7dfccc"
                         },
                         {
@@ -181,6 +181,22 @@
                             "codeClass": null,
                             "name": "MyGridView",
                             "designerId": "d2d3902c-29c3-4640-8652-16de629c1ac9"
+                        },
+                        {
+                            "type": "Ext.toolbar.Paging",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayInfo": true,
+                                "dock": "bottom",
+                                "store": "propertyStore",
+                                "width": 360
+                            },
+                            "name": "MyPagingToolbar",
+                            "designerId": "27bbeeb4-7f7c-44e3-8075-2bb3255ce1ae"
                         }
                     ]
                 }
