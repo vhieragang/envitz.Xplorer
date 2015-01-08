@@ -17,7 +17,9 @@ Ext.define('Xplorer.view.MyViewport', {
     extend: 'Ext.container.Viewport',
 
     requires: [
-        'Ext.form.field.File',
+        'Ext.tree.Panel',
+        'Ext.tree.View',
+        'Ext.tree.Column',
         'Ext.grid.Panel',
         'Ext.grid.column.Date',
         'Ext.grid.View',
@@ -33,26 +35,20 @@ Ext.define('Xplorer.view.MyViewport', {
         Ext.applyIf(me, {
             items: [
                 {
-                    xtype: 'panel',
+                    xtype: 'treepanel',
                     region: 'west',
                     split: true,
-                    itemId: 'menuPanel',
-                    width: 280,
-                    title: 'Files',
-                    items: [
+                    width: 200,
+                    title: 'File',
+                    viewConfig: {
+
+                    },
+                    columns: [
                         {
-                            xtype: 'textfield',
-                            margin: '5, 0 , 5, 0',
-                            width: 250,
-                            fieldLabel: 'Label',
-                            labelWidth: 50
-                        },
-                        {
-                            xtype: 'filefield',
-                            margin: '5, 0 , 5, 0',
-                            width: 250,
-                            fieldLabel: 'File',
-                            labelWidth: 50
+                            xtype: 'treecolumn',
+                            dataIndex: 'text',
+                            text: 'Directory',
+                            flex: 1
                         }
                     ]
                 },

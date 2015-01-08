@@ -16,54 +16,48 @@
     "designerId": "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
     "cn": [
         {
-            "type": "Ext.panel.Panel",
+            "type": "Ext.tree.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "menuPanel",
-                "layout|margins": null,
                 "layout|region": "west",
                 "layout|split": true,
-                "title": "Files",
-                "width": 280
+                "title": "File",
+                "width": 200
             },
-            "name": "MyPanel1",
-            "designerId": "70e4bdc2-8c21-4da3-b357-bdac73847e65",
+            "name": "TreeGrid",
+            "designerId": "12786afe-af01-4eeb-a613-d0adc5143491",
+            "isBuiltIn": true,
+            "iconCls": "icon-treegridpanel",
+            "autoName": "TreeGrid",
             "cn": [
                 {
-                    "type": "Ext.form.field.Text",
+                    "type": "Ext.tree.View",
                     "reference": {
-                        "name": "items",
-                        "type": "array"
+                        "name": "viewConfig",
+                        "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Label",
-                        "labelWidth": 50,
-                        "margin": "5, 0 , 5, 0",
-                        "width": 250
-                    },
-                    "name": "MyTextField",
-                    "designerId": "4621fe8d-14e0-42d4-8754-19bba014d547"
+                    "name": "MyTreeView",
+                    "designerId": "49c67ae6-be50-45ea-b3ce-c7466f3011b9"
                 },
                 {
-                    "type": "Ext.form.field.File",
+                    "type": "Ext.tree.Column",
                     "reference": {
-                        "name": "items",
+                        "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "File",
-                        "labelWidth": 50,
-                        "margin": "5, 0 , 5, 0",
-                        "width": 250
+                        "dataIndex": "text",
+                        "flex": 1,
+                        "text": "Directory"
                     },
-                    "name": "MyFileUpload",
-                    "designerId": "247286be-86be-4677-ab3f-fe677842a103"
+                    "name": "MyTreeColumn",
+                    "designerId": "fc60fa71-4adf-4302-9cc1-dc36d4fb9717"
                 }
             ]
         },
@@ -190,6 +184,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|displayName": "toolBarPaging",
                                 "displayInfo": true,
                                 "dock": "bottom",
                                 "store": "propertyStore",
