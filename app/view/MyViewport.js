@@ -20,6 +20,8 @@ Ext.define('Xplorer.view.MyViewport', {
         'Ext.tree.Panel',
         'Ext.tree.View',
         'Ext.tree.Column',
+        'Ext.tab.Panel',
+        'Ext.tab.Tab',
         'Ext.grid.Panel',
         'Ext.grid.column.Date',
         'Ext.grid.View',
@@ -47,7 +49,7 @@ Ext.define('Xplorer.view.MyViewport', {
                         {
                             xtype: 'treecolumn',
                             dataIndex: 'text',
-                            text: 'Directory',
+                            text: 'Directory Tree',
                             flex: 1
                         }
                     ]
@@ -59,48 +61,76 @@ Ext.define('Xplorer.view.MyViewport', {
                     layout: 'fit',
                     items: [
                         {
-                            xtype: 'gridpanel',
-                            title: 'ToolBox',
-                            store: 'propertyStore',
-                            columns: [
+                            xtype: 'tabpanel',
+                            activeTab: 0,
+                            items: [
                                 {
-                                    xtype: 'gridcolumn',
-                                    width: 250,
-                                    dataIndex: 'Name',
-                                    text: 'Name'
-                                },
-                                {
-                                    xtype: 'gridcolumn',
-                                    width: 130,
-                                    dataIndex: 'Size',
-                                    text: 'Size'
-                                },
-                                {
-                                    xtype: 'gridcolumn',
-                                    width: 130,
-                                    dataIndex: 'Type',
-                                    text: 'Type'
-                                },
-                                {
-                                    xtype: 'datecolumn',
-                                    width: 203,
-                                    dataIndex: 'Date',
-                                    text: 'Date'
-                                },
-                                {
-                                    xtype: 'gridcolumn',
-                                    width: 250,
-                                    dataIndex: 'User',
-                                    text: 'User'
-                                }
-                            ],
-                            dockedItems: [
-                                {
-                                    xtype: 'pagingtoolbar',
-                                    dock: 'bottom',
-                                    width: 360,
-                                    displayInfo: true,
-                                    store: 'propertyStore'
+                                    xtype: 'panel',
+                                    title: 'Directory',
+                                    dockedItems: [
+                                        {
+                                            xtype: 'toolbar',
+                                            dock: 'top',
+                                            items: [
+                                                {
+                                                    xtype: 'button',
+                                                    allowDepress: false,
+                                                    destroyMenu: false,
+                                                    icon: 'home',
+                                                    text: 'MyButton'
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    items: [
+                                        {
+                                            xtype: 'gridpanel',
+                                            height: 598,
+                                            title: '',
+                                            store: 'propertyStore',
+                                            columns: [
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    width: 250,
+                                                    dataIndex: 'Name',
+                                                    text: 'Name'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    width: 130,
+                                                    dataIndex: 'Size',
+                                                    text: 'Size'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    width: 130,
+                                                    dataIndex: 'Type',
+                                                    text: 'Type'
+                                                },
+                                                {
+                                                    xtype: 'datecolumn',
+                                                    width: 203,
+                                                    dataIndex: 'Date',
+                                                    text: 'Date'
+                                                },
+                                                {
+                                                    xtype: 'gridcolumn',
+                                                    width: 250,
+                                                    dataIndex: 'User',
+                                                    text: 'User'
+                                                }
+                                            ],
+                                            dockedItems: [
+                                                {
+                                                    xtype: 'pagingtoolbar',
+                                                    dock: 'bottom',
+                                                    width: 360,
+                                                    displayInfo: true,
+                                                    store: 'propertyStore'
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
