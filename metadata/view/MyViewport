@@ -117,32 +117,146 @@
                                 {
                                     "type": "Ext.toolbar.Toolbar",
                                     "reference": {
-                                        "name": "dockedItems",
+                                        "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "dock": "top"
+                                        "dock": null,
+                                        "focusOnToFront": null
                                     },
                                     "name": "MyToolbar1",
                                     "designerId": "cb5cad63-0dc5-4db7-9a16-6f85135bb0da",
                                     "cn": [
                                         {
-                                            "type": "Ext.button.Button",
+                                            "type": "Ext.container.Container",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "allowDepress": false,
-                                                "destroyMenu": false,
-                                                "icon": "home",
-                                                "layout|flex": null,
-                                                "text": "MyButton"
+                                                "container|align": "stretch",
+                                                "layout": "hbox",
+                                                "layout|flex": null
                                             },
-                                            "name": "MyButton",
-                                            "designerId": "8dcdeee5-eac4-415c-8bc5-b5796a4625be"
+                                            "name": "MyContainer",
+                                            "designerId": "6ee4ca86-c911-4646-8538-c97f38a56aa4",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "arrowAlign": null,
+                                                        "designer|displayName": "uploadButton",
+                                                        "designer|uiInterfaceName": "plain-small",
+                                                        "destroyMenu": null,
+                                                        "height": 35,
+                                                        "hideMode": null,
+                                                        "href": "#",
+                                                        "hrefTarget": null,
+                                                        "icon": "image/image/upload.svg",
+                                                        "iconAlign": null,
+                                                        "iconCls": null,
+                                                        "layout|flex": null,
+                                                        "layout|margins": null,
+                                                        "overflowText": null,
+                                                        "text": "Upload",
+                                                        "textAlign": "right",
+                                                        "tooltip": "Upload",
+                                                        "ui": "plain",
+                                                        "width": 75
+                                                    },
+                                                    "name": "MyButton",
+                                                    "configAlternates": {
+                                                        "tooltip": "string"
+                                                    },
+                                                    "designerId": "80261d44-5858-4914-845d-fa2e88764521"
+                                                },
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|uiInterfaceName": "plain-small",
+                                                        "height": 35,
+                                                        "href": "#",
+                                                        "icon": "image/image/download.svg",
+                                                        "layout|flex": null,
+                                                        "layout|margins": "0 0 0 5",
+                                                        "shadow": null,
+                                                        "text": "Download",
+                                                        "textAlign": "right",
+                                                        "tooltip": "Download",
+                                                        "ui": "plain",
+                                                        "width": 92
+                                                    },
+                                                    "name": "MyButton1",
+                                                    "configAlternates": {
+                                                        "tooltip": "string"
+                                                    },
+                                                    "designerId": "c534802d-f42a-4ded-881e-cf3e3ec7b959"
+                                                },
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|uiInterfaceName": "plain-small",
+                                                        "height": 35,
+                                                        "href": "#",
+                                                        "icon": "image/image/eye.svg",
+                                                        "layout|flex": null,
+                                                        "layout|margins": "0 0 0 5",
+                                                        "text": "View",
+                                                        "textAlign": "right",
+                                                        "tooltip": "View",
+                                                        "ui": "plain",
+                                                        "width": 63
+                                                    },
+                                                    "name": "MyButton2",
+                                                    "configAlternates": {
+                                                        "tooltip": "string"
+                                                    },
+                                                    "designerId": "e27cb4ae-ecc8-47dd-87fe-c6bb2b629816"
+                                                },
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|uiInterfaceName": "plain-toolbar-small",
+                                                        "height": null,
+                                                        "href": "#",
+                                                        "icon": "image/image/permission.svg",
+                                                        "layout|flex": null,
+                                                        "layout|margins": "0 0 0 5",
+                                                        "text": "Permission",
+                                                        "textAlign": "right",
+                                                        "tooltip": "Change Permission",
+                                                        "ui": "plain",
+                                                        "width": 98
+                                                    },
+                                                    "name": "MyButton3",
+                                                    "configAlternates": {
+                                                        "tooltip": "string"
+                                                    },
+                                                    "designerId": "1bb0aae8-5393-4c69-8e5b-ff02bde917d2"
+                                                }
+                                            ]
                                         }
                                     ]
                                 },

@@ -67,22 +67,67 @@ Ext.define('Xplorer.view.MyViewport', {
                                 {
                                     xtype: 'panel',
                                     title: 'Directory',
-                                    dockedItems: [
+                                    items: [
                                         {
                                             xtype: 'toolbar',
-                                            dock: 'top',
                                             items: [
                                                 {
-                                                    xtype: 'button',
-                                                    allowDepress: false,
-                                                    destroyMenu: false,
-                                                    icon: 'home',
-                                                    text: 'MyButton'
+                                                    xtype: 'container',
+                                                    layout: {
+                                                        type: 'hbox',
+                                                        align: 'stretch'
+                                                    },
+                                                    items: [
+                                                        {
+                                                            xtype: 'button',
+                                                            height: 35,
+                                                            ui: 'plain',
+                                                            width: 75,
+                                                            href: '#',
+                                                            icon: 'image/image/upload.svg',
+                                                            text: 'Upload',
+                                                            textAlign: 'right',
+                                                            tooltip: 'Upload'
+                                                        },
+                                                        {
+                                                            xtype: 'button',
+                                                            margins: '0 0 0 5',
+                                                            height: 35,
+                                                            ui: 'plain',
+                                                            width: 92,
+                                                            href: '#',
+                                                            icon: 'image/image/download.svg',
+                                                            text: 'Download',
+                                                            textAlign: 'right',
+                                                            tooltip: 'Download'
+                                                        },
+                                                        {
+                                                            xtype: 'button',
+                                                            margins: '0 0 0 5',
+                                                            height: 35,
+                                                            ui: 'plain',
+                                                            width: 63,
+                                                            href: '#',
+                                                            icon: 'image/image/eye.svg',
+                                                            text: 'View',
+                                                            textAlign: 'right',
+                                                            tooltip: 'View'
+                                                        },
+                                                        {
+                                                            xtype: 'button',
+                                                            margins: '0 0 0 5',
+                                                            ui: 'plain',
+                                                            width: 98,
+                                                            href: '#',
+                                                            icon: 'image/image/permission.svg',
+                                                            text: 'Permission',
+                                                            textAlign: 'right',
+                                                            tooltip: 'Change Permission'
+                                                        }
+                                                    ]
                                                 }
                                             ]
-                                        }
-                                    ],
-                                    items: [
+                                        },
                                         {
                                             xtype: 'gridpanel',
                                             height: 598,
