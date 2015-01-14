@@ -81,10 +81,11 @@ Ext.define('Xplorer.view.MyViewport', {
                                                         {
                                                             xtype: 'button',
                                                             height: 35,
+                                                            itemId: 'upload-Icon',
                                                             ui: 'plain',
                                                             width: 75,
                                                             href: '#',
-                                                            icon: 'image/image/upload.svg',
+                                                            iconCls: 'upload-Icon',
                                                             text: 'Upload',
                                                             textAlign: 'right',
                                                             tooltip: 'Upload'
@@ -93,10 +94,11 @@ Ext.define('Xplorer.view.MyViewport', {
                                                             xtype: 'button',
                                                             margins: '0 0 0 5',
                                                             height: 35,
+                                                            itemId: 'download-Icon',
                                                             ui: 'plain',
                                                             width: 92,
                                                             href: '#',
-                                                            icon: 'image/image/download.svg',
+                                                            iconCls: 'download-Icon',
                                                             text: 'Download',
                                                             textAlign: 'right',
                                                             tooltip: 'Download'
@@ -105,10 +107,11 @@ Ext.define('Xplorer.view.MyViewport', {
                                                             xtype: 'button',
                                                             margins: '0 0 0 5',
                                                             height: 35,
+                                                            itemId: 'view-Icon',
                                                             ui: 'plain',
                                                             width: 63,
                                                             href: '#',
-                                                            icon: 'image/image/eye.svg',
+                                                            iconCls: 'view-Icon',
                                                             text: 'View',
                                                             textAlign: 'right',
                                                             tooltip: 'View'
@@ -116,10 +119,11 @@ Ext.define('Xplorer.view.MyViewport', {
                                                         {
                                                             xtype: 'button',
                                                             margins: '0 0 0 5',
+                                                            itemId: 'permission-Icon',
                                                             ui: 'plain',
                                                             width: 98,
                                                             href: '#',
-                                                            icon: 'image/image/permission.svg',
+                                                            iconCls: 'permission-Icon',
                                                             text: 'Permission',
                                                             textAlign: 'right',
                                                             tooltip: 'Change Permission'
