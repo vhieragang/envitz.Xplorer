@@ -80,12 +80,13 @@ Ext.define('Xplorer.view.MyViewport', {
                                                     items: [
                                                         {
                                                             xtype: 'button',
+                                                            margins: '0 0 0 5',
                                                             height: 35,
-                                                            itemId: 'upload-Icon',
                                                             ui: 'plain',
                                                             width: 75,
                                                             href: '#',
-                                                            iconCls: 'upload-Icon',
+                                                            icon: 'icon-uploadLogo',
+                                                            iconCls: 'icon-uploadLogo',
                                                             text: 'Upload',
                                                             textAlign: 'right',
                                                             tooltip: 'Upload'
@@ -98,7 +99,7 @@ Ext.define('Xplorer.view.MyViewport', {
                                                             ui: 'plain',
                                                             width: 92,
                                                             href: '#',
-                                                            iconCls: 'download-Icon',
+                                                            iconCls: 'icon-downloadLogo',
                                                             text: 'Download',
                                                             textAlign: 'right',
                                                             tooltip: 'Download'
@@ -111,7 +112,7 @@ Ext.define('Xplorer.view.MyViewport', {
                                                             ui: 'plain',
                                                             width: 63,
                                                             href: '#',
-                                                            iconCls: 'view-Icon',
+                                                            iconCls: 'icon-viewLogo',
                                                             text: 'View',
                                                             textAlign: 'right',
                                                             tooltip: 'View'
@@ -123,7 +124,7 @@ Ext.define('Xplorer.view.MyViewport', {
                                                             ui: 'plain',
                                                             width: 98,
                                                             href: '#',
-                                                            iconCls: 'permission-Icon',
+                                                            iconCls: 'icon-permissionLogo',
                                                             text: 'Permission',
                                                             textAlign: 'right',
                                                             tooltip: 'Change Permission'
