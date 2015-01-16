@@ -1,0 +1,52 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "name": "MyController",
+    "designerId": "6b0bb40b-f788-4671-a480-0c0d44747e7c",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mygridpanel",
+                "selector": "#mygridpanel",
+                "xtype": "Ext.grid.Panel"
+            },
+            "name": "mygridpanel",
+            "designerId": "1b082a66-d272-4a90-b573-413f4633866b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#mygridpanel",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelCellContextMenu",
+                "implHandler": [
+                    "                        var position = e.getXY();",
+                    "                        e.stopEvent();",
+                    "                        menu_grid.showAt(position);"
+                ],
+                "name": "cellcontextmenu",
+                "scope": "me"
+            },
+            "name": "onGridpanelCellContextMenu",
+            "designerId": "c0646165-e013-40b3-b603-5b1d48a64b1a"
+        }
+    ]
+}

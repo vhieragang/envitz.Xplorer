@@ -29,6 +29,9 @@ Ext.application({
     views: [
         'MyViewport'
     ],
+    controllers: [
+        'MyController'
+    ],
     name: 'Xplorer',
 
     launch: function() {
