@@ -12,21 +12,6 @@
     "designerId": "6b0bb40b-f788-4671-a480-0c0d44747e7c",
     "cn": [
         {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "mygridpanel",
-                "selector": "#mygridpanel",
-                "xtype": "Ext.grid.Panel"
-            },
-            "name": "mygridpanel",
-            "designerId": "1b082a66-d272-4a90-b573-413f4633866b"
-        },
-        {
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -38,9 +23,23 @@
                 "designer|targetType": "Ext.grid.Panel",
                 "fn": "onGridpanelCellContextMenu",
                 "implHandler": [
-                    "                        var position = e.getXY();",
-                    "                        e.stopEvent();",
-                    "                        menu_grid.showAt(position);"
+                    "var me=this;",
+                    "e.stopEvent();",
+                    "",
+                    "",
+                    " // create the Grid",
+                    "  this.mygridpanel = Ext.create('Ext.grid.Panel', {",
+                    "    // ...",
+                    "    listeners: {",
+                    "      beforeitemcontextmenu: function(view, record, item, index, e)",
+                    "      {",
+                    "        e.stopEvent();",
+                    "        gridMenu.showAt(e.getXY());",
+                    "      }",
+                    "    }",
+                    "  });",
+                    "",
+                    " gridMenu.showAt(e.getXY());"
                 ],
                 "name": "cellcontextmenu",
                 "scope": "me"
