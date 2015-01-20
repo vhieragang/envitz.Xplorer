@@ -21,30 +21,22 @@
             "userConfig": {
                 "designer|controlQuery": "#mygridpanel",
                 "designer|targetType": "Ext.grid.Panel",
-                "fn": "onGridpanelCellContextMenu",
+                "fn": "onGridpanelContainerContextMenu",
                 "implHandler": [
-                    "var me=this;",
-                    "e.stopEvent();",
-                    "",
-                    "",
-                    " // create the Grid",
-                    "  this.mygridpanel = Ext.create('Ext.grid.Panel', {",
-                    "    // ...",
-                    "    listeners: {",
-                    "      beforeitemcontextmenu: function(view, record, item, index, e)",
-                    "      {",
-                    "        e.stopEvent();",
-                    "        gridMenu.showAt(e.getXY());",
-                    "      }",
-                    "    }",
-                    "  });",
-                    "",
-                    " gridMenu.showAt(e.getXY());"
+                    "    var contextMenu = Ext.create('Ext.menu.Menu', {",
+                    "                items: [{",
+                    "                    text: 'View',",
+                    "                },{",
+                    "                    text: 'Download',",
+                    "                }]",
+                    "            });",
+                    "           e.stopEvent();",
+                    "           contextMenu.showAt(e.getXY());"
                 ],
-                "name": "cellcontextmenu",
+                "name": "containercontextmenu",
                 "scope": "me"
             },
-            "name": "onGridpanelCellContextMenu",
+            "name": "onGridpanelContainerContextMenu",
             "designerId": "c0646165-e013-40b3-b603-5b1d48a64b1a"
         }
     ]

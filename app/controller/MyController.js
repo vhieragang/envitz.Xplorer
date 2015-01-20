@@ -16,30 +16,22 @@
 Ext.define('Xplorer.controller.MyController', {
     extend: 'Ext.app.Controller',
 
-    onGridpanelCellContextMenu: function(tableview, td, cellIndex, record, tr, rowIndex, e, eOpts) {
-        var me=this;
-        e.stopEvent();
-
-
-         // create the Grid
-          this.mygridpanel = Ext.create('Ext.grid.Panel', {
-            // ...
-            listeners: {
-              beforeitemcontextmenu: function(view, record, item, index, e)
-              {
-                e.stopEvent();
-                gridMenu.showAt(e.getXY());
-              }
-            }
-          });
-
-         gridMenu.showAt(e.getXY());
+    onGridpanelContainerContextMenu: function(dataview, e, eOpts) {
+            var contextMenu = Ext.create('Ext.menu.Menu', {
+                        items: [{
+                            text: 'View',
+                        },{
+                            text: 'Download',
+                        }]
+                    });
+                   e.stopEvent();
+                   contextMenu.showAt(e.getXY());
     },
 
     init: function(application) {
         this.control({
             "#mygridpanel": {
-                cellcontextmenu: this.onGridpanelCellContextMenu
+                containercontextmenu: this.onGridpanelContainerContextMenu
             }
         });
     }
