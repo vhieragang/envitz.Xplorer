@@ -45,7 +45,7 @@ Ext.define('explorer.view.MyViewport', {
                     width: 231,
                     collapsed: true,
                     collapsible: true,
-                    title: 'Panel',
+                    title: 'Project Folders',
                     titleCollapse: true,
                     store: 'MyTreeStore',
                     viewConfig: {
@@ -57,6 +57,7 @@ Ext.define('explorer.view.MyViewport', {
                     region: 'center',
                     itemId: 'contentPanel',
                     layout: 'fit',
+                    header: false,
                     title: 'Content',
                     dockedItems: [
                         {
@@ -187,13 +188,16 @@ Ext.define('explorer.view.MyViewport', {
                             xtype: 'pagingtoolbar',
                             dock: 'bottom',
                             width: 360,
-                            displayInfo: true
+                            displayInfo: true,
+                            store: 'myViewStore'
                         }
                     ],
                     items: [
                         {
                             xtype: 'gridpanel',
+                            itemId: 'mygridpanel',
                             header: false,
+                            scroll: 'vertical',
                             store: 'myViewStore',
                             columns: [
                                 {

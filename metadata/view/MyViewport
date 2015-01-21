@@ -29,7 +29,7 @@
                 "layout|split": true,
                 "manageHeight": null,
                 "store": "MyTreeStore",
-                "title": "Panel",
+                "title": "Project Folders",
                 "titleCollapse": true,
                 "width": 231
             },
@@ -61,6 +61,7 @@
             "codeClass": null,
             "userConfig": {
                 "border": null,
+                "header": false,
                 "itemId": "contentPanel",
                 "layout": "fit",
                 "layout|region": "center",
@@ -388,7 +389,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "header": false,
-                        "scroll": null,
+                        "itemId": "mygridpanel",
+                        "scroll": "vertical",
                         "store": "myViewStore",
                         "title": null,
                         "verticalScroller": null
@@ -486,6 +488,7 @@
                     "userConfig": {
                         "displayInfo": true,
                         "dock": "bottom",
+                        "store": "myViewStore",
                         "width": 360
                     },
                     "name": "MyPagingToolbar",

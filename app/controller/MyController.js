@@ -22,7 +22,8 @@ Ext.define('explorer.controller.MyController', {
            //  width: 100,
              items: [{
                  text: 'Open',
-                 icon: 'resources/icons/pencil.png'
+                 iconCls: 'icon-openLogo',
+                 href: '#',
              }, {
                  text: 'Delete',
                  iconCls: 'icon-cancelLogo',
@@ -31,7 +32,7 @@ Ext.define('explorer.controller.MyController', {
                          }
              }, {
                  text: 'Download',
-                 icon: 'resources/icons/recycleBin.png'
+                 iconCls: 'icon-downLoadLogo'
              }]
          });
 
