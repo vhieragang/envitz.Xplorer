@@ -10,11 +10,12 @@
             "MyController"
         ],
         "models": [
-            "Properties"
+            "myViewModel"
         ],
-        "name": "Xplorer",
+        "name": "explorer",
         "stores": [
-            "propertyStore"
+            "myViewStore",
+            "MyTreeStore"
         ],
         "views": [
             "MyViewport"

@@ -13,22 +13,23 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('Xplorer.view.MyViewport', {
+Ext.define('explorer.view.MyViewport', {
     extend: 'Ext.container.Viewport',
 
     requires: [
         'Ext.tree.Panel',
         'Ext.tree.View',
-        'Ext.tree.Column',
-        'Ext.tab.Panel',
-        'Ext.tab.Tab',
+        'Ext.button.Button',
+        'Ext.toolbar.Separator',
+        'Ext.form.field.Text',
         'Ext.grid.Panel',
+        'Ext.grid.column.Number',
         'Ext.grid.column.Date',
         'Ext.grid.View',
         'Ext.toolbar.Paging'
     ],
 
-    itemId: 'mainView',
+    itemId: 'headerPanel',
     layout: 'border',
 
     initComponent: function() {
@@ -40,149 +41,188 @@ Ext.define('Xplorer.view.MyViewport', {
                     xtype: 'treepanel',
                     region: 'west',
                     split: true,
-                    width: 200,
-                    title: 'File',
+                    itemId: 'menuPanel',
+                    width: 231,
+                    collapsed: true,
+                    collapsible: true,
+                    title: 'Panel',
+                    titleCollapse: true,
+                    store: 'MyTreeStore',
                     viewConfig: {
-
-                    },
-                    columns: [
-                        {
-                            xtype: 'treecolumn',
-                            dataIndex: 'text',
-                            text: 'Directory Tree',
-                            flex: 1
-                        }
-                    ]
+                        itemId: 'treeMenu'
+                    }
                 },
                 {
                     xtype: 'panel',
                     region: 'center',
                     itemId: 'contentPanel',
                     layout: 'fit',
-                    items: [
+                    title: 'Content',
+                    dockedItems: [
                         {
-                            xtype: 'tabpanel',
-                            activeTab: 0,
+                            xtype: 'toolbar',
+                            dock: 'top',
+                            width: 150,
                             items: [
                                 {
-                                    xtype: 'panel',
-                                    title: 'Directory',
+                                    xtype: 'container',
                                     items: [
                                         {
-                                            xtype: 'toolbar',
-                                            items: [
-                                                {
-                                                    xtype: 'container',
-                                                    layout: {
-                                                        type: 'hbox',
-                                                        align: 'stretch'
-                                                    },
-                                                    items: [
-                                                        {
-                                                            xtype: 'button',
-                                                            margins: '0 0 0 5',
-                                                            height: 35,
-                                                            ui: 'plain',
-                                                            width: 75,
-                                                            href: '#',
-                                                            icon: 'icon-uploadLogo',
-                                                            iconCls: 'icon-uploadLogo',
-                                                            text: 'Upload',
-                                                            textAlign: 'right',
-                                                            tooltip: 'Upload'
-                                                        },
-                                                        {
-                                                            xtype: 'button',
-                                                            margins: '0 0 0 5',
-                                                            height: 35,
-                                                            itemId: 'download-Icon',
-                                                            ui: 'plain',
-                                                            width: 92,
-                                                            href: '#',
-                                                            iconCls: 'icon-downloadLogo',
-                                                            text: 'Download',
-                                                            textAlign: 'right',
-                                                            tooltip: 'Download'
-                                                        },
-                                                        {
-                                                            xtype: 'button',
-                                                            margins: '0 0 0 5',
-                                                            height: 35,
-                                                            itemId: 'view-Icon',
-                                                            ui: 'plain',
-                                                            width: 63,
-                                                            href: '#',
-                                                            iconCls: 'icon-viewLogo',
-                                                            text: 'View',
-                                                            textAlign: 'right',
-                                                            tooltip: 'View'
-                                                        },
-                                                        {
-                                                            xtype: 'button',
-                                                            margins: '0 0 0 5',
-                                                            itemId: 'permission-Icon',
-                                                            ui: 'plain',
-                                                            width: 98,
-                                                            href: '#',
-                                                            iconCls: 'icon-permissionLogo',
-                                                            text: 'Permission',
-                                                            textAlign: 'right',
-                                                            tooltip: 'Change Permission'
-                                                        }
-                                                    ]
-                                                }
-                                            ]
+                                            xtype: 'button',
+                                            height: 35,
+                                            margin: '0 0 0 5',
+                                            ui: 'plain',
+                                            width: 35,
+                                            iconCls: 'icon-backLogo'
                                         },
                                         {
-                                            xtype: 'gridpanel',
-                                            height: 598,
-                                            title: '',
-                                            store: 'propertyStore',
-                                            columns: [
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    width: 250,
-                                                    dataIndex: 'Name',
-                                                    text: 'Name'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    width: 130,
-                                                    dataIndex: 'Size',
-                                                    text: 'Size'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    width: 130,
-                                                    dataIndex: 'Type',
-                                                    text: 'Type'
-                                                },
-                                                {
-                                                    xtype: 'datecolumn',
-                                                    width: 203,
-                                                    dataIndex: 'Date',
-                                                    text: 'Date'
-                                                },
-                                                {
-                                                    xtype: 'gridcolumn',
-                                                    width: 250,
-                                                    dataIndex: 'User',
-                                                    text: 'User'
-                                                }
-                                            ],
-                                            dockedItems: [
-                                                {
-                                                    xtype: 'pagingtoolbar',
-                                                    dock: 'bottom',
-                                                    width: 360,
-                                                    displayInfo: true,
-                                                    store: 'propertyStore'
-                                                }
-                                            ]
+                                            xtype: 'button',
+                                            height: 35,
+                                            margin: '0 0 0 10',
+                                            ui: 'plain',
+                                            width: 35,
+                                            iconCls: 'icon-forwardLogo'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            height: 35,
+                                            margin: '0 0 0 10',
+                                            ui: 'plain',
+                                            width: 35,
+                                            iconCls: 'icon-reloadLogo '
+                                        }
+                                    ]
+                                },
+                                {
+                                    xtype: 'tbseparator',
+                                    margins: '0 0 0 50',
+                                    height: 35,
+                                    width: 3
+                                },
+                                {
+                                    xtype: 'container',
+                                    items: [
+                                        {
+                                            xtype: 'button',
+                                            height: 28,
+                                            margin: '0 0 0 50',
+                                            ui: 'plain',
+                                            width: 60,
+                                            iconCls: 'icon-homeLogo',
+                                            text: 'Home',
+                                            textAlign: 'right'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            height: 25,
+                                            margin: '0 0 0 10',
+                                            ui: 'plain',
+                                            width: 60,
+                                            href: '#',
+                                            iconCls: 'icon-uploadLogo ',
+                                            overflowText: 'Upload',
+                                            text: 'Upload',
+                                            textAlign: 'right'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            height: 25,
+                                            margin: '0 0 0 10',
+                                            ui: 'plain',
+                                            width: 75,
+                                            iconCls: 'icon-downloadLogo',
+                                            text: 'Download',
+                                            textAlign: 'right'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            height: 25,
+                                            margin: '0 0 0 10',
+                                            ui: 'plain',
+                                            width: 25,
+                                            href: '#',
+                                            iconCls: 'icon-newFolderLogo'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            height: 25,
+                                            margin: '0 0 0 10',
+                                            ui: 'plain-small',
+                                            width: 25,
+                                            iconCls: 'icon-folderDeleteLogo'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            height: 23,
+                                            margin: '0 0 0 10',
+                                            ui: 'plain',
+                                            width: 23,
+                                            iconCls: 'icon-deleteLogo'
+                                        }
+                                    ]
+                                },
+                                {
+                                    xtype: 'textfield',
+                                    margin: '0 0 0 215',
+                                    width: 300,
+                                    fieldLabel: 'Search',
+                                    labelWidth: 50
+                                },
+                                {
+                                    xtype: 'container',
+                                    margin: '0 0 0 10',
+                                    items: [
+                                        {
+                                            xtype: 'button',
+                                            height: 23,
+                                            ui: 'plain-small',
+                                            width: 23,
+                                            iconCls: 'icon-searchLogo'
                                         }
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            xtype: 'pagingtoolbar',
+                            dock: 'bottom',
+                            width: 360,
+                            displayInfo: true
+                        }
+                    ],
+                    items: [
+                        {
+                            xtype: 'gridpanel',
+                            header: false,
+                            store: 'myViewStore',
+                            columns: [
+                                {
+                                    xtype: 'gridcolumn',
+                                    width: 360,
+                                    dataIndex: 'Name',
+                                    text: 'Name'
+                                },
+                                {
+                                    xtype: 'numbercolumn',
+                                    dataIndex: 'Size',
+                                    text: 'Size'
+                                },
+                                {
+                                    xtype: 'datecolumn',
+                                    width: 150,
+                                    dataIndex: 'Date',
+                                    text: 'Date Modified'
+                                },
+                                {
+                                    xtype: 'gridcolumn',
+                                    width: 511,
+                                    dataIndex: 'Owner',
+                                    text: 'Owner'
+                                }
+                            ],
+                            viewConfig: {
+                                itemId: 'mygridview'
+                            }
                         }
                     ]
                 }

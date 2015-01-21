@@ -21,10 +21,11 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Properties'
+        'myViewModel'
     ],
     stores: [
-        'propertyStore'
+        'myViewStore',
+        'MyTreeStore'
     ],
     views: [
         'MyViewport'
@@ -32,10 +33,10 @@ Ext.application({
     controllers: [
         'MyController'
     ],
-    name: 'Xplorer',
+    name: 'explorer',
 
     launch: function() {
-        Ext.create('Xplorer.view.MyViewport');
+        Ext.create('explorer.view.MyViewport');
     }
 
 });

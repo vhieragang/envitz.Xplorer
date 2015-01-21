@@ -9,7 +9,7 @@
         "designer|userClassName": "MyController"
     },
     "name": "MyController",
-    "designerId": "6b0bb40b-f788-4671-a480-0c0d44747e7c",
+    "designerId": "f897f1be-cacd-4056-934b-7acbc6519006",
     "cn": [
         {
             "type": "controlleraction",
@@ -19,25 +19,36 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "#mygridpanel",
-                "designer|targetType": "Ext.grid.Panel",
-                "fn": "onGridpanelContainerContextMenu",
+                "designer|controlQuery": "#mygridview",
+                "designer|targetType": "Ext.grid.View",
+                "fn": "onViewItemContextMenu",
                 "implHandler": [
-                    "    var contextMenu = Ext.create('Ext.menu.Menu', {",
-                    "                items: [{",
-                    "                    text: 'View',",
-                    "                },{",
-                    "                    text: 'Download',",
-                    "                }]",
-                    "            });",
-                    "           e.stopEvent();",
-                    "           contextMenu.showAt(e.getXY());"
+                    "var rowMenu = Ext.create('Ext.menu.Menu', {",
+                    "   //  height: 150,",
+                    "   //  width: 100,",
+                    "     items: [{",
+                    "         text: 'Open',",
+                    "         icon: 'resources/icons/pencil.png'",
+                    "     }, {",
+                    "         text: 'Delete',",
+                    "         iconCls: 'icon-cancelLogo',",
+                    "         handler: function(){",
+                    "         me.fireEvent('removeRow', this);",
+                    "                 }",
+                    "     }, {",
+                    "         text: 'Download',",
+                    "         icon: 'resources/icons/recycleBin.png'",
+                    "     }]",
+                    " });",
+                    "",
+                    "        e.stopEvent();",
+                    "        rowMenu.showAt(e.getXY());"
                 ],
-                "name": "containercontextmenu",
+                "name": "itemcontextmenu",
                 "scope": "me"
             },
-            "name": "onGridpanelContainerContextMenu",
-            "designerId": "c0646165-e013-40b3-b603-5b1d48a64b1a"
+            "name": "onViewItemContextMenu",
+            "designerId": "f0f0a4a5-0234-4acb-81a2-4f7110dbc5a7"
         }
     ]
 }

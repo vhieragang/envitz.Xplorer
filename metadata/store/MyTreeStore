@@ -1,0 +1,92 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyTreeStore",
+        "model": null,
+        "root": [
+            "{",
+            "    expanded: true,",
+            "    text: \"My Documents\",",
+            "    children: [",
+            "        { ",
+            "            text: \"New Folder1\", ",
+            "            expanded: true,",
+            "            children: [",
+            "            \t{ ",
+            "                    text: \"untitled.txt\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"myPicture.jpg\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"hello World.js\", ",
+            "                    leaf: true ",
+            "                }",
+            "        \t] ",
+            "        },",
+            "        { ",
+            "            text: \"my Files\", ",
+            "            expanded: true,",
+            "            children: [",
+            "            \t{ ",
+            "                    text: \"xampp.exe\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"workbench.exe\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"office 2013 x64.msi\", ",
+            "                    leaf: true ",
+            "                }",
+            "        \t] ",
+            "        },",
+            "        { ",
+            "            text: \"my Folder\", ",
+            "            expanded: true,",
+            "            children: [",
+            "            \t{ ",
+            "                    text: \"this is my text.docx\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"myData.txt\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"modeling.php\", ",
+            "                    leaf: true ",
+            "                }",
+            "        \t] ",
+            "        }",
+            "    ]",
+            "}"
+        ],
+        "storeId": "MyTreeStore"
+    },
+    "name": "MyTreeStore",
+    "designerId": "0a5c5804-a8fc-4c29-a6f0-fd199c21f7dc",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "name": "MyField4",
+            "designerId": "d1c69ff9-eece-4cd8-992b-473d776b453e"
+        }
+    ]
+}

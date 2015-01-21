@@ -1,0 +1,11 @@
+{
+    "profiles": [
+        {
+            "name": "Custom Size",
+            "width": 1360,
+            "height": 1024,
+            "builtIn": false,
+            "fw": "ext"
+        }
+    ]
+}

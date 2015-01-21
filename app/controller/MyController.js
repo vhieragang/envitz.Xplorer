@@ -13,25 +13,36 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('Xplorer.controller.MyController', {
+Ext.define('explorer.controller.MyController', {
     extend: 'Ext.app.Controller',
 
-    onGridpanelContainerContextMenu: function(dataview, e, eOpts) {
-            var contextMenu = Ext.create('Ext.menu.Menu', {
-                        items: [{
-                            text: 'View',
-                        },{
-                            text: 'Download',
-                        }]
-                    });
-                   e.stopEvent();
-                   contextMenu.showAt(e.getXY());
+    onViewItemContextMenu: function(dataview, record, item, index, e, eOpts) {
+        var rowMenu = Ext.create('Ext.menu.Menu', {
+           //  height: 150,
+           //  width: 100,
+             items: [{
+                 text: 'Open',
+                 icon: 'resources/icons/pencil.png'
+             }, {
+                 text: 'Delete',
+                 iconCls: 'icon-cancelLogo',
+                 handler: function(){
+                 me.fireEvent('removeRow', this);
+                         }
+             }, {
+                 text: 'Download',
+                 icon: 'resources/icons/recycleBin.png'
+             }]
+         });
+
+                e.stopEvent();
+                rowMenu.showAt(e.getXY());
     },
 
     init: function(application) {
         this.control({
-            "#mygridpanel": {
-                containercontextmenu: this.onGridpanelContainerContextMenu
+            "#mygridview": {
+                itemcontextmenu: this.onViewItemContextMenu
             }
         });
     }
