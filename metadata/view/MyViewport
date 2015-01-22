@@ -424,11 +424,57 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "autoRender": null,
                                 "dataIndex": "Size",
+                                "format": "0,000",
+                                "itemId": null,
+                                "renderData": null,
+                                "renderTo": null,
                                 "text": "Size"
                             },
                             "name": "MyNumberColumn",
-                            "designerId": "d7c2edf7-843c-4762-a900-df26539c8e12"
+                            "designerId": "d7c2edf7-843c-4762-a900-df26539c8e12",
+                            "cn": [
+                                {
+                                    "type": "basicfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "",
+                                            "            var byteLimit = 1073741824,     //byte size equivalent to kilobyte",
+                                            "                kbLimit = 1048576,\t\t\t//kilobyte size equivalent to megabyte",
+                                            "                mbLimit = 1024;\t\t\t\t//megabyte size equivalent to gegabyte",
+                                            "",
+                                            "",
+                                            "                if (value < byteLimit) {",
+                                            "                    if (value === 1) {",
+                                            "                        out = '1 byte';",
+                                            "                    } else {",
+                                            "                        out = value + ' bytes';",
+                                            "                    }",
+                                            "                } else if (value < kbLimit) {",
+                                            "                    out = (Math.round(((value*10) / byteLimit))/10) + ' KB';",
+                                            "                } else if (value < mbLimit) {",
+                                            "                    out = (Math.round(((value*10) / kbLimit))/10) + ' MB';",
+                                            "                } else {",
+                                            "                    out = (Math.round(((value*10) / mbLimit))/10) + ' GB';",
+                                            "                }",
+                                            "                return out;",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "99fb4f0c-c650-4797-ac52-1d1250756bef"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Date",
