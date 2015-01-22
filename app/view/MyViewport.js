@@ -209,26 +209,24 @@ Ext.define('explorer.view.MyViewport', {
                                 {
                                     xtype: 'numbercolumn',
                                     renderer: function(value) {
-
-                                        var byteLimit = 1073741824,     //byte size equivalent to kilobyte
-                                        kbLimit = 1048576,			//kilobyte size equivalent to megabyte
-                                        mbLimit = 1024;				//megabyte size equivalent to gegabyte
-
+                                        var byteLimit = 1024,
+                                            kbLimit = 1048576,
+                                            mbLimit = 1073741824;
 
                                         if (value < byteLimit) {
                                             if (value === 1) {
                                                 out = '1 byte';
                                             } else {
-                                                out = value + ' bytes';
+                                                out = value + 'bytes';
                                             }
                                         } else if (value < kbLimit) {
-                                            out = (Math.round(((value*10) / byteLimit))/10) + ' KB';
+                                            out = (Math.round(((value*10) / byteLimit))/10) + 'KB';
                                         } else if (value < mbLimit) {
-                                            out = (Math.round(((value*10) / kbLimit))/10) + ' MB';
+                                            out = (Math.round(((value*10) / kbLimit))/10) + 'MB';
                                         } else {
-                                            out = (Math.round(((value*10) / mbLimit))/10) + ' GB';
+                                            out = (Math.round(((value*10) / mbLimit))/10) + 'GB';
                                         }
-                                        return out;
+                                        return Ext.util.Format.fileSize(value); //Will return the value of our filesize
 
                                     },
                                     dataIndex: 'Size',

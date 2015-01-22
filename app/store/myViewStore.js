@@ -208,6 +208,20 @@ Ext.define('explorer.store.myViewStore', {
                     Size: 426,
                     Date: '10/13/2011',
                     Owner: 'voluptas'
+                },
+                {
+                    Name: 'Jesrel Agang',
+                    //This is my Test fileSize for our Ext.util.Format
+                    Size: 123456789,
+                    Date: '1/22/2015',
+                    Owner: 'Vhier.agang@gmail.com'//For example only!
+                },
+                {
+                    Name: 'Jesrel Agang',
+                    //This is my Test fileSize for our Ext.util.Format
+                    Size: 123456789012345,
+                    Date: '1/22/2015',
+                    Owner: 'Vhier.agang@gmail.com'//For example only!
                 }
             ],
             proxy: {
