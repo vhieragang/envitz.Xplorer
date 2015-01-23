@@ -17,7 +17,10 @@ Ext.define('explorer.model.myViewModel', {
     extend: 'Ext.data.Model',
 
     requires: [
-        'Ext.data.Field'
+        'Ext.data.Field',
+        'Ext.data.proxy.Rest',
+        'Ext.data.writer.Json',
+        'Ext.data.reader.Json'
     ],
 
     fields: [
@@ -37,5 +40,22 @@ Ext.define('explorer.model.myViewModel', {
             name: 'Owner',
             type: 'string'
         }
-    ]
+    ],
+
+    proxy: {
+        type: 'rest',
+        url: '../comments',
+        writer: {
+            type: 'json',
+            getData: function(data) {
+                for(i = 0; i < data.length; i++){
+                    data[i].createdTime = Ext.Date.format(new Date(data[i].createdTime), "Y-m-d");
+                }
+                return data;
+            }
+        },
+        reader: {
+            type: 'json'
+        }
+    }
 });

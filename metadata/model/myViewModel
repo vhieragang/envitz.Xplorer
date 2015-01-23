@@ -66,6 +66,65 @@
             },
             "name": "MyField3",
             "designerId": "48967fbb-aeef-4805-bfcb-b772f30c9722"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../comments"
+            },
+            "name": "MyRestProxy",
+            "designerId": "e343f9dc-bbe8-45f5-a0e0-2d7fe76cc270",
+            "cn": [
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonWriter",
+                    "designerId": "25917bfd-9af8-4457-8d74-6bb5338f0b54",
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "data"
+                                ],
+                                "fn": "getData",
+                                "implHandler": [
+                                    "for(i = 0; i < data.length; i++){",
+                                    "                    data[i].createdTime = Ext.Date.format(new Date(data[i].createdTime), \"Y-m-d\");",
+                                    "                }",
+                                    "                return data;"
+                                ]
+                            },
+                            "name": "getData",
+                            "designerId": "3473ac80-724a-47cb-86c8-a07c18e13183"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader1",
+                    "designerId": "a7f9a494-5f37-4f94-82f8-248884ae1233"
+                }
+            ]
         }
     ]
 }

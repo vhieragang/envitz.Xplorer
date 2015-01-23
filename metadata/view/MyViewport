@@ -388,6 +388,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "columnLines": true,
                         "header": false,
                         "itemId": "mygridpanel",
                         "scroll": "vertical",

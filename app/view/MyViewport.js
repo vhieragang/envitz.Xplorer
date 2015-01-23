@@ -197,6 +197,7 @@ Ext.define('explorer.view.MyViewport', {
                             xtype: 'gridpanel',
                             itemId: 'mygridpanel',
                             header: false,
+                            columnLines: true,
                             scroll: 'vertical',
                             store: 'myViewStore',
                             columns: [
