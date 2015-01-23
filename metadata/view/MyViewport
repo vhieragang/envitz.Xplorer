@@ -430,6 +430,7 @@
                                 "itemId": null,
                                 "renderData": null,
                                 "renderTo": null,
+                                "sortable": true,
                                 "text": "Size"
                             },
                             "name": "MyNumberColumn",
@@ -448,29 +449,11 @@
                                         ],
                                         "fn": "renderer",
                                         "implHandler": [
-                                            "            var byteLimit = 1024,",
-                                            "                kbLimit = 1048576,",
-                                            "                mbLimit = 1073741824;",
-                                            "",
-                                            "            if (value < byteLimit) {",
-                                            "                if (value === 1) {",
-                                            "                    out = '1 byte';",
-                                            "                } else {",
-                                            "                    out = value + 'bytes';",
-                                            "                }",
-                                            "            } else if (value < kbLimit) {",
-                                            "                out = (Math.round(((value*10) / byteLimit))/10) + 'KB';",
-                                            "            } else if (value < mbLimit) {",
-                                            "                out = (Math.round(((value*10) / kbLimit))/10) + 'MB';",
-                                            "            } else {",
-                                            "                out = (Math.round(((value*10) / mbLimit))/10) + 'GB';",
-                                            "            }",
-                                            "              return Ext.util.Format.fileSize(value); //Will return the value of our filesize",
-                                            ""
+                                            "return Ext.util.Format.fileSize(value);"
                                         ]
                                     },
                                     "name": "renderer",
-                                    "designerId": "99fb4f0c-c650-4797-ac52-1d1250756bef"
+                                    "designerId": "d4810dc7-6ba6-40cb-81f8-519ca69bddf0"
                                 }
                             ]
                         },

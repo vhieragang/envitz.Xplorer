@@ -209,26 +209,9 @@ Ext.define('explorer.view.MyViewport', {
                                 {
                                     xtype: 'numbercolumn',
                                     renderer: function(value) {
-                                        var byteLimit = 1024,
-                                            kbLimit = 1048576,
-                                            mbLimit = 1073741824;
-
-                                        if (value < byteLimit) {
-                                            if (value === 1) {
-                                                out = '1 byte';
-                                            } else {
-                                                out = value + 'bytes';
-                                            }
-                                        } else if (value < kbLimit) {
-                                            out = (Math.round(((value*10) / byteLimit))/10) + 'KB';
-                                        } else if (value < mbLimit) {
-                                            out = (Math.round(((value*10) / kbLimit))/10) + 'MB';
-                                        } else {
-                                            out = (Math.round(((value*10) / mbLimit))/10) + 'GB';
-                                        }
-                                        return Ext.util.Format.fileSize(value); //Will return the value of our filesize
-
+                                        return Ext.util.Format.fileSize(value);
                                     },
+                                    sortable: true,
                                     dataIndex: 'Size',
                                     text: 'Size',
                                     format: '0,000'
