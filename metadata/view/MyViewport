@@ -467,6 +467,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "Date",
+                                "format": "Y/m/d",
                                 "text": "Date Modified",
                                 "width": 150
                             },

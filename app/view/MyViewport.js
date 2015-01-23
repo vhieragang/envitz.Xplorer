@@ -221,7 +221,8 @@ Ext.define('explorer.view.MyViewport', {
                                     xtype: 'datecolumn',
                                     width: 150,
                                     dataIndex: 'Date',
-                                    text: 'Date Modified'
+                                    text: 'Date Modified',
+                                    format: 'Y/m/d'
                                 },
                                 {
                                     xtype: 'gridcolumn',
