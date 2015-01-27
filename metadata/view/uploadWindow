@@ -74,39 +74,7 @@
                                 "text": "Browse..."
                             },
                             "name": "MyFileButton",
-                            "designerId": "4ab1520a-e8ff-469f-a9a0-3dab0b20824b",
-                            "cn": [
-                                {
-                                    "type": "fixedfunction",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "designer|params": [
-                                            "button",
-                                            "e"
-                                        ],
-                                        "fn": "handler",
-                                        "implHandler": [
-                                            "",
-                                            "                var form = this.up('form').getForm();",
-                                            "                if(form.isValid()){",
-                                            "                    form.submit({",
-                                            "                        url: 'file-upload.php',",
-                                            "                        waitMsg: 'Uploading your file...',",
-                                            "                        success: function(fp, o) {",
-                                            "                            Ext.Msg.alert('Success', 'Processed file \"' + o.result.file + '\" on the server');",
-                                            "                        }",
-                                            "                    });",
-                                            "                }"
-                                        ]
-                                    },
-                                    "name": "handler",
-                                    "designerId": "839b7133-e8fa-44c7-b054-ea2f15d207d2"
-                                }
-                            ]
+                            "designerId": "4ab1520a-e8ff-469f-a9a0-3dab0b20824b"
                         }
                     ]
                 },
@@ -126,7 +94,39 @@
                     "configAlternates": {
                         "style": "string"
                     },
-                    "designerId": "a9026219-1f50-448c-8901-46abb8bdc6ba"
+                    "designerId": "a9026219-1f50-448c-8901-46abb8bdc6ba",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "                var form = this.up('form').getForm();",
+                                    "                if(form.isValid()){",
+                                    "                    form.submit({",
+                                    "                        url: 'file-upload.php', //This is for Server Side...",
+                                    "                        waitMsg: 'Uploading your file...',",
+                                    "                        success: function(fp, o) {",
+                                    "                            Ext.Msg.alert('Success', 'Processed file \"' + o.result.file + '\" on the server');",
+                                    "                        }",
+                                    "                    });",
+                                    "                }"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "3e91490d-f45e-486a-87a8-78c70e9c8370"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.button.Button",
@@ -144,7 +144,29 @@
                     "configAlternates": {
                         "style": "string"
                     },
-                    "designerId": "8c5f8816-e818-426d-a4ee-296cf9147864"
+                    "designerId": "8c5f8816-e818-426d-a4ee-296cf9147864",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "this.up('form').getForm().reset();"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "9cbe0a70-32b9-4e3f-9500-119e38903e27"
+                        }
+                    ]
                 }
             ]
         }

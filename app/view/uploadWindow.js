@@ -53,29 +53,32 @@ Ext.define('explorer.view.uploadWindow', {
                             labelWidth: 50,
                             buttonConfig: {
                                 xtype: 'filebutton',
-                                handler: function(button, e) {
-
-                                    var form = this.up('form').getForm();
-                                    if(form.isValid()){
-                                        form.submit({
-                                            url: 'file-upload.php',
-                                            waitMsg: 'Uploading your file...',
-                                            success: function(fp, o) {
-                                                Ext.Msg.alert('Success', 'Processed file "' + o.result.file + '" on the server');
-                                            }
-                                        });
-                                    }
-                                },
                                 text: 'Browse...'
                             }
                         },
                         {
                             xtype: 'button',
+                            handler: function(button, e) {
+
+                                var form = this.up('form').getForm();
+                                if(form.isValid()){
+                                    form.submit({
+                                        url: 'file-upload.php', //This is for Server Side...
+                                        waitMsg: 'Uploading your file...',
+                                        success: function(fp, o) {
+                                            Ext.Msg.alert('Success', 'Processed file "' + o.result.file + '" on the server');
+                                        }
+                                    });
+                                }
+                            },
                             style: 'margin-left: 276px',
                             text: 'Save'
                         },
                         {
                             xtype: 'button',
+                            handler: function(button, e) {
+                                this.up('form').getForm().reset();
+                            },
                             margin: '0 0 0 10',
                             text: 'Reset'
                         }
