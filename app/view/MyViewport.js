@@ -116,10 +116,10 @@ Ext.define('explorer.view.MyViewport', {
                                         {
                                             xtype: 'button',
                                             height: 25,
+                                            itemId: 'mybutton',
                                             margin: '0 0 0 10',
                                             ui: 'plain',
                                             width: 60,
-                                            href: '#',
                                             iconCls: 'icon-uploadLogo ',
                                             overflowText: 'Upload',
                                             text: 'Upload',
@@ -206,6 +206,11 @@ Ext.define('explorer.view.MyViewport', {
                                     width: 360,
                                     dataIndex: 'Name',
                                     text: 'Name'
+                                },
+                                {
+                                    xtype: 'gridcolumn',
+                                    dataIndex: 'Extension',
+                                    text: 'Extension'
                                 },
                                 {
                                     xtype: 'numbercolumn',

@@ -39,6 +39,10 @@ Ext.define('explorer.model.myViewModel', {
         {
             name: 'Owner',
             type: 'string'
+        },
+        {
+            name: 'Extension',
+            type: 'string'
         }
     ],
 

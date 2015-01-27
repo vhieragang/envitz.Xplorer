@@ -28,7 +28,8 @@ Ext.application({
         'MyTreeStore'
     ],
     views: [
-        'MyViewport'
+        'MyViewport',
+        'uploadWindow'
     ],
     controllers: [
         'MyController'

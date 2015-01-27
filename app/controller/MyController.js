@@ -40,10 +40,18 @@ Ext.define('explorer.controller.MyController', {
                 rowMenu.showAt(e.getXY());
     },
 
+    onButtonClick: function(button, e, eOpts) {
+        Ext.create('explorer.view.uploadWindow').show();
+
+    },
+
     init: function(application) {
         this.control({
             "#mygridview": {
                 itemcontextmenu: this.onViewItemContextMenu
+            },
+            "#mybutton": {
+                click: this.onButtonClick
             }
         });
     }

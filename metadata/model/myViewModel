@@ -125,6 +125,20 @@
                     "designerId": "a7f9a494-5f37-4f94-82f8-248884ae1233"
                 }
             ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Extension",
+                "type": "string"
+            },
+            "name": "MyField5",
+            "designerId": "91b1c3b0-2fba-408a-9493-45ae7399ad5c"
         }
     ]
 }

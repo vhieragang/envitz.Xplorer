@@ -1,0 +1,152 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "uploadWindow",
+        "height": 130,
+        "itemId": "uploadWindow",
+        "title": "Upload File",
+        "width": 400
+    },
+    "name": "MyWindow",
+    "designerId": "e5b9b011-ac49-49ba-a4ff-5673b67393fa",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "defaults": null,
+                "header": false,
+                "height": 100,
+                "title": "My Form"
+            },
+            "name": "MyForm",
+            "designerId": "8c5a18c4-a5a5-4648-b29e-480743104688",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "blankText": "File Name",
+                        "fieldLabel": "Name",
+                        "labelWidth": 50,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "f8391864-e41f-4b2a-b906-3f094fb2f4ed"
+                },
+                {
+                    "type": "Ext.form.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "labelWidth": 50,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyFileUpload",
+                    "designerId": "7a4f1e87-2bf1-4fa2-b9dd-60ac4cdfae89",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.FileButton",
+                            "reference": {
+                                "name": "buttonConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Browse..."
+                            },
+                            "name": "MyFileButton",
+                            "designerId": "4ab1520a-e8ff-469f-a9a0-3dab0b20824b",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "",
+                                            "                var form = this.up('form').getForm();",
+                                            "                if(form.isValid()){",
+                                            "                    form.submit({",
+                                            "                        url: 'file-upload.php',",
+                                            "                        waitMsg: 'Uploading your file...',",
+                                            "                        success: function(fp, o) {",
+                                            "                            Ext.Msg.alert('Success', 'Processed file \"' + o.result.file + '\" on the server');",
+                                            "                        }",
+                                            "                    });",
+                                            "                }"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "839b7133-e8fa-44c7-b054-ea2f15d207d2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": null,
+                        "style": "margin-left: 276px",
+                        "text": "Save"
+                    },
+                    "name": "MyButton10",
+                    "configAlternates": {
+                        "style": "string"
+                    },
+                    "designerId": "a9026219-1f50-448c-8901-46abb8bdc6ba"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "0 0 0 10",
+                        "pressedCls": null,
+                        "text": "Reset"
+                    },
+                    "name": "MyButton11",
+                    "configAlternates": {
+                        "style": "string"
+                    },
+                    "designerId": "8c5f8816-e818-426d-a4ee-296cf9147864"
+                }
+            ]
+        }
+    ]
+}

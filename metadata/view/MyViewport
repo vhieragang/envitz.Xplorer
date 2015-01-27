@@ -225,10 +225,11 @@
                                         "designer|displayName": "Upload",
                                         "designer|uiInterfaceName": "plain-small",
                                         "height": 25,
-                                        "href": "#",
+                                        "href": null,
                                         "icon": null,
                                         "iconAlign": null,
                                         "iconCls": "icon-uploadLogo ",
+                                        "itemId": "mybutton",
                                         "margin": "0 0 0 10",
                                         "overflowText": "Upload",
                                         "text": "Upload",
@@ -389,12 +390,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "columnLines": true,
+                        "dock": null,
                         "header": false,
                         "itemId": "mygridpanel",
+                        "maxWidth": null,
                         "scroll": "vertical",
                         "store": "myViewStore",
                         "title": null,
-                        "verticalScroller": null
+                        "verticalScroller": null,
+                        "width": null
                     },
                     "name": "MyGridPanel",
                     "designerId": "95dbeaa5-fd24-455c-bfb0-7023d48befdc",
@@ -416,6 +420,21 @@
                             },
                             "name": "MyColumn",
                             "designerId": "579607b7-82ef-431d-bca1-f4fcb9d3392c"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Extension",
+                                "text": "Extension",
+                                "width": null
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "6967a9b8-1da1-45e7-a5d9-f12adba328fd"
                         },
                         {
                             "type": "Ext.grid.column.Number",

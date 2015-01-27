@@ -18,7 +18,8 @@
             "MyTreeStore"
         ],
         "views": [
-            "MyViewport"
+            "MyViewport",
+            "uploadWindow"
         ]
     },
     "name": "Application",
