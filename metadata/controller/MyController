@@ -71,6 +71,26 @@
             },
             "name": "onButtonClick",
             "designerId": "c0c03121-1050-49cf-8379-d9f916cd5c99"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#reloadButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick1",
+                "implHandler": [
+                    " window.location.reload();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onButtonClick1",
+            "designerId": "3154646e-8e14-41ad-84b3-64aeb7ad1940"
         }
     ]
 }

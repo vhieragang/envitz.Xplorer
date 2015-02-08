@@ -21,7 +21,7 @@ Ext.define('explorer.view.MyViewport', {
         'Ext.tree.View',
         'Ext.button.Button',
         'Ext.toolbar.Separator',
-        'Ext.form.field.Text',
+        'Ext.form.field.ComboBox',
         'Ext.grid.Panel',
         'Ext.grid.column.Number',
         'Ext.grid.column.Date',
@@ -87,8 +87,9 @@ Ext.define('explorer.view.MyViewport', {
                                         {
                                             xtype: 'button',
                                             height: 35,
+                                            itemId: 'reloadButton',
                                             margin: '0 0 0 10',
-                                            ui: 'plain',
+                                            ui: 'plain-small',
                                             width: 35,
                                             iconCls: 'icon-reloadLogo '
                                         }
@@ -106,6 +107,7 @@ Ext.define('explorer.view.MyViewport', {
                                         {
                                             xtype: 'button',
                                             height: 28,
+                                            itemId: 'mybutton9',
                                             margin: '0 0 0 50',
                                             ui: 'plain',
                                             width: 60,
@@ -121,7 +123,6 @@ Ext.define('explorer.view.MyViewport', {
                                             ui: 'plain',
                                             width: 60,
                                             iconCls: 'icon-uploadLogo ',
-                                            overflowText: 'Upload',
                                             text: 'Upload',
                                             textAlign: 'right'
                                         },
@@ -163,11 +164,17 @@ Ext.define('explorer.view.MyViewport', {
                                     ]
                                 },
                                 {
-                                    xtype: 'textfield',
-                                    margin: '0 0 0 215',
+                                    xtype: 'combobox',
+                                    itemId: 'searchField',
+                                    margin: '0 0 0 100',
                                     width: 300,
                                     fieldLabel: 'Search',
-                                    labelWidth: 50
+                                    labelWidth: 50,
+                                    emptyText: 'Live search requires a minimum of 4 letters.',
+                                    hideTrigger: true,
+                                    displayField: 'Name',
+                                    pageSize: 10,
+                                    store: 'myViewStore'
                                 },
                                 {
                                     xtype: 'container',
@@ -186,6 +193,29 @@ Ext.define('explorer.view.MyViewport', {
                         },
                         {
                             xtype: 'pagingtoolbar',
+                            onClick: function(which) {
+                                var ds = this.ds;
+                                switch(which){
+                                    case "first":
+                                    ds.load({params:{start: 0, limit: this.pageSize}});
+                                    break;
+                                    case "prev":
+                                    ds.load({params:{start: Math.max(0, this.cursor-this.pageSize), limit: this.pageSize}});
+                                    break;
+                                    case "next":
+                                    ds.load({params:{start: this.cursor+this.pageSize, limit: this.pageSize}});
+                                    break;
+                                    case "last":
+                                    var total = ds.getTotalCount();
+                                    var extra = total % this.pageSize;
+                                    var lastStart = extra ? (total - extra) : total-this.pageSize;
+                                    ds.load({params:{start: lastStart, limit: this.pageSize}});
+                                    break;
+                                    case "refresh":
+                                    ds.load({params:{start: this.cursor,limit:this.pageSize,myparams:'val'}});
+                                    break;
+                                }
+                            },
                             dock: 'bottom',
                             width: 360,
                             displayInfo: true,

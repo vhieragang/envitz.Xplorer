@@ -155,9 +155,10 @@
                                         "designer|uiInterfaceName": "plain-small",
                                         "height": 35,
                                         "iconCls": "icon-reloadLogo ",
+                                        "itemId": "reloadButton",
                                         "margin": "0 0 0 10",
                                         "text": null,
-                                        "ui": "plain",
+                                        "ui": "plain-small",
                                         "width": 35
                                     },
                                     "name": "MyButton4",
@@ -204,7 +205,9 @@
                                     "userConfig": {
                                         "designer|uiInterfaceName": "plain-small",
                                         "height": 28,
+                                        "href": null,
                                         "iconCls": "icon-homeLogo",
+                                        "itemId": "mybutton9",
                                         "margin": "0 0 0 50",
                                         "text": "Home",
                                         "textAlign": "right",
@@ -231,7 +234,8 @@
                                         "iconCls": "icon-uploadLogo ",
                                         "itemId": "mybutton",
                                         "margin": "0 0 0 10",
-                                        "overflowText": "Upload",
+                                        "overflowText": null,
+                                        "overflowX": null,
                                         "text": "Upload",
                                         "textAlign": "right",
                                         "ui": "plain",
@@ -324,21 +328,28 @@
                             ]
                         },
                         {
-                            "type": "Ext.form.field.Text",
+                            "type": "Ext.form.field.ComboBox",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "displayField": "Name",
+                                "emptyText": "Live search requires a minimum of 4 letters.",
                                 "fieldLabel": "Search",
+                                "hideTrigger": true,
+                                "itemId": "searchField",
                                 "labelWidth": 50,
                                 "layout|flex": null,
-                                "margin": "0 0 0 215",
+                                "margin": "0 0 0 100",
+                                "pageSize": 10,
+                                "store": "myViewStore",
+                                "typeAhead": null,
                                 "width": 300
                             },
-                            "name": "MyTextField",
-                            "designerId": "db8adac6-f435-4d4b-ab06-e4a31e56855a"
+                            "name": "MyComboBox",
+                            "designerId": "d55c7251-5f69-49c2-a943-8c847845dde8"
                         },
                         {
                             "type": "Ext.container.Container",
@@ -540,7 +551,48 @@
                         "width": 360
                     },
                     "name": "MyPagingToolbar",
-                    "designerId": "bd9f2d78-6938-44dd-9542-8b64afed2b0e"
+                    "designerId": "bd9f2d78-6938-44dd-9542-8b64afed2b0e",
+                    "cn": [
+                        {
+                            "type": "basicfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "which"
+                                ],
+                                "fn": "onClick",
+                                "implHandler": [
+                                    "var ds = this.ds;",
+                                    "        switch(which){",
+                                    "            case \"first\":",
+                                    "                ds.load({params:{start: 0, limit: this.pageSize}});",
+                                    "            break;",
+                                    "            case \"prev\":",
+                                    "                ds.load({params:{start: Math.max(0, this.cursor-this.pageSize), limit: this.pageSize}});",
+                                    "            break;",
+                                    "            case \"next\":",
+                                    "                ds.load({params:{start: this.cursor+this.pageSize, limit: this.pageSize}});",
+                                    "            break;",
+                                    "            case \"last\":",
+                                    "                var total = ds.getTotalCount();",
+                                    "                var extra = total % this.pageSize;",
+                                    "                var lastStart = extra ? (total - extra) : total-this.pageSize;",
+                                    "                ds.load({params:{start: lastStart, limit: this.pageSize}});",
+                                    "            break;",
+                                    "            case \"refresh\":",
+                                    "                ds.load({params:{start: this.cursor,limit:this.pageSize,myparams:'val'}});",
+                                    "            break;",
+                                    "        }"
+                                ]
+                            },
+                            "name": "onClick",
+                            "designerId": "63effee4-6909-4083-bec1-36d96544249e"
+                        }
+                    ]
                 }
             ]
         }

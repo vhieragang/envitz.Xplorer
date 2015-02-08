@@ -45,6 +45,10 @@ Ext.define('explorer.controller.MyController', {
 
     },
 
+    onButtonClick1: function(button, e, eOpts) {
+         window.location.reload();
+    },
+
     init: function(application) {
         this.control({
             "#mygridview": {
@@ -52,6 +56,9 @@ Ext.define('explorer.controller.MyController', {
             },
             "#mybutton": {
                 click: this.onButtonClick
+            },
+            "#reloadButton": {
+                click: this.onButtonClick1
             }
         });
     }
