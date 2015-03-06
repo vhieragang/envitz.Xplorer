@@ -21,8 +21,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "collapsed": true,
-                "collapsible": true,
+                "collapsed": null,
+                "collapsible": null,
                 "itemId": "menuPanel",
                 "layout|collapseMode": null,
                 "layout|region": "west",
@@ -30,7 +30,7 @@
                 "manageHeight": null,
                 "store": "MyTreeStore",
                 "title": "Project Folders",
-                "titleCollapse": true,
+                "titleCollapse": null,
                 "width": 231
             },
             "name": "MyTreePanel",

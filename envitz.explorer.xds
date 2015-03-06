@@ -30,13 +30,14 @@
         "displayfield-ExtBox1-1169-inputEl": "a new version of the framework is available",
         "displayfield-ExtBox1-1128-inputEl": "a new version of the framework is available"
     },
-    "xdsVersion": "3.1.0",
-    "xdsBuild": 1943,
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 75,
     "schemaVersion": 1,
-    "upgradeVersion": 300000000007,
+    "upgradeVersion": 310000000001,
     "framework": "ext42",
     "viewOrderMap": {
         "view": [
+            "e5b9b011-ac49-49ba-a4ff-5673b67393fa",
             "71dac962-2e3d-4f7c-8d30-68d5e5880e83"
         ],
         "store": [
